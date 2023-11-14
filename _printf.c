@@ -41,6 +41,12 @@ int _printf(const char *format, ...)
 					string_handler(str);
 					(str != NULL) ? count_char++ : count_char;
 					break;
+				case 'd':
+					int_handler(va_arg(args_list, int), count_char);
+					break;
+				case 'i':
+					int_handler(va_arg(args_list, int), count_char);
+					break;
 			}
 		}
 		format++;
