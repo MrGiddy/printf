@@ -8,7 +8,7 @@
 #include <limits.h>
 
 int _printf(const char *format, ...);
-void _putchar(int ch);
+int _putchar(int ch);
 int _strlen(char *);
 int string_handler(char *str);
 int int_handler(int number, int count_char);

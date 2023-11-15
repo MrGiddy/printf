@@ -44,6 +44,10 @@ int _printf(const char *format, ...)
 				case 'i':
 					int_handler(va_arg(args_list, int), count_char);
 					break;
+				default:
+					count_char += _putchar('%');
+					count_char += _putchar(*format);
+					break;
 			}
 		}
 		format++;
