@@ -3,25 +3,25 @@
 /**
  * int_handler - prints an integer
  * @number: The integer to print
- * @count_char: An int variable tracking no. of characters printed
  * Return: Nothing
  */
-int int_handler(int number, int count_char)
+int int_handler(int number)
 {
-	int i, j, quotient, remainder;
+	int i, j, count, quotient, remainder;
 	int int_buffer[100];
 
+	count = 0;
 	if (number == 0)
 	{
 		_putchar('0');
-		count_char++;
+		count++;
 		return (0);
 	}
 
 	if (number < 0)
 	{
 		_putchar('-');
-		count_char++;
+		count++;
 		number = -number;
 	}
 
@@ -42,8 +42,8 @@ int int_handler(int number, int count_char)
 	{
 		/* Print the character at index j */
 		_putchar(int_buffer[j] + 48);
-		count_char++;
+		count++;
 	}
 
-	return (0);
+	return (count);
 }

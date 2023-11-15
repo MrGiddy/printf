@@ -42,10 +42,10 @@ int _printf(const char *format, ...)
 					count_char += string_handler(va_arg(args_list, char *));
 					break;
 				case 'd':
-					int_handler(va_arg(args_list, int), count_char);
+					count_char += int_handler(va_arg(args_list, int));
 					break;
 				case 'i':
-					int_handler(va_arg(args_list, int), count_char);
+					count_char += int_handler(va_arg(args_list, int));
 					break;
 				default:
 					count_char += _putchar('%');
