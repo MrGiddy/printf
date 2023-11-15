@@ -5,16 +5,21 @@
  * @str: A string
  * Return: Nothing
  */
-void string_handler(char *str)
+int string_handler(char *str)
 {
-	char *nil = "(nil)";
+	int count;
 
+	char *nil = "(null)";
+
+	count = 0;
 	if (str == NULL)
 	{
-		write(1, nil, _strlen(nil));
+		count += write(1, nil, _strlen(nil));
 	}
 	else
 	{
-		write(1, str, _strlen(str));
+		count += write(1, str, _strlen(str));
 	}
+
+	return (count);
 }

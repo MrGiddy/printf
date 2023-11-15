@@ -9,7 +9,6 @@ int _printf(const char *format, ...)
 {
 	va_list args_list;
 	int count_char;
-	char *str;
 
 	if (format == NULL)
 		return (-1);
@@ -37,9 +36,7 @@ int _printf(const char *format, ...)
 					count_char += 1;
 					break;
 				case 's':
-					str = va_arg(args_list, char *);
-					string_handler(str);
-					(str != NULL) ? count_char++ : count_char;
+					count_char += string_handler(va_arg(args_list, char *));
 					break;
 				case 'd':
 					int_handler(va_arg(args_list, int), count_char);
