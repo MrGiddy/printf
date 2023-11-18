@@ -62,6 +62,9 @@ int _printf(const char *format, ...)
 				case 'x':
 					count_char += int_to_hex(va_arg(args_list, unsigned int), 0);
 					break;
+				case 'S':
+					count_char += handle_S(va_arg(args_list, char *));
+					break;
 				default:
 					count_char += _putchar('%');
 					count_char += _putchar(*format);

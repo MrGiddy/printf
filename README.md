@@ -24,7 +24,7 @@ Handle the following conversion specifiers:
 * You don't have to handle precision
 * You don't have to handle the length modifiers
 
-### 2. Handle %b
+### 2. Handle %b - A custom conversion specifier
 Handle the following conversion specifiers:
 * b: the unsigned int argument is converted to binary
 
@@ -38,3 +38,10 @@ Handle the following conversion specifiers:
 * You don't have to handle field width
 * You don't have to handle precision
 * You don't have to handle the lenghth modifiers
+
+### 4. Local buffer - 1024 bytes
+Use a local buffer of 1024 bytes in order to call write as little as possible
+
+## 5. Handle %S - A custom conversion specifier
+* S: prints the string.
+* Non printable characters (0 < ASCII value < 32 or >= 127) are printed this way: \x, followed by athe ASCII code value in hexadecimal (upper case - always 2 characters)
