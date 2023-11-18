@@ -13,5 +13,6 @@ int _putchar(int ch);
 int _strlen(char *);
 int string_handler(char *str);
 int int_handler(int number);
+int int_to_binary(unsigned int number);
 
 #endif /* MAIN_H */

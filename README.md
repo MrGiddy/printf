@@ -1,6 +1,6 @@
 # 0x11. C - printf
 
-### [0-I'm not going anywhere. You can print wherever you want to. I'm here and I'm a Spur for life]()
+### 0. Handle %c, %s, and %
 Write a function that produces output according to a format.
 * Prototype: int \_printf(const char \*format, ...);
 * Returns: the number of characters printed (excluding the null byte used to end output to strings)
@@ -15,7 +15,7 @@ Write a function that produces output according to a format.
 * You don't have to handle precision
 * You don't have go handle the length modifiers
 
-[1. Education is when you read the fine print. Experience is what you get if you don't]()
+### 1. Handle %d and %i
 Handle the following conversion specifiers:
 * d
 * i
@@ -23,3 +23,7 @@ Handle the following conversion specifiers:
 * You don't have to handle field width
 * You don't have to handle precision
 * You don't have to handle the length modifiers
+
+### 2. Handle %b
+Handle the following conversion specifiers:
+* b: the unsigned int argument is converted to binary

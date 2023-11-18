@@ -47,6 +47,9 @@ int _printf(const char *format, ...)
 				case 'i':
 					count_char += int_handler(va_arg(args_list, int));
 					break;
+				case 'b':
+					count_char += int_to_binary(va_arg(args_list, unsigned int));
+					break;
 				default:
 					count_char += _putchar('%');
 					count_char += _putchar(*format);
