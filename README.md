@@ -27,3 +27,14 @@ Handle the following conversion specifiers:
 ### 2. Handle %b
 Handle the following conversion specifiers:
 * b: the unsigned int argument is converted to binary
+
+### 3. Handle %u, %o, %x, and %X
+Handle the following conversion specifiers:
+* u
+* o
+* x
+* X
+* You don't have to handle the flag characters
+* You don't have to handle field width
+* You don't have to handle precision
+* You don't have to handle the lenghth modifiers

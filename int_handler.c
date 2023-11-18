@@ -31,9 +31,6 @@ int int_handler(int number)
 			number = -number;
 		}
 	}
-	else
-	{
-	}
 
 	i = 0;
 	quotient = number;

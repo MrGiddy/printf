@@ -50,6 +50,18 @@ int _printf(const char *format, ...)
 				case 'b':
 					count_char += int_to_binary(va_arg(args_list, unsigned int));
 					break;
+				case 'u':
+					count_char += unsigned_int(va_arg(args_list, unsigned int), 10);
+					break;
+				case 'o':
+					count_char += unsigned_int(va_arg(args_list, unsigned int), 8);
+					break;
+				case 'X':
+					count_char += int_to_hex(va_arg(args_list, unsigned int), 1);
+					break;
+				case 'x':
+					count_char += int_to_hex(va_arg(args_list, unsigned int), 0);
+					break;
 				default:
 					count_char += _putchar('%');
 					count_char += _putchar(*format);
