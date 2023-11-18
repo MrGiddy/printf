@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <stddef.h>
 #include <limits.h>
+#define BUFFSIZE 1024
 
 int _printf(const char *format, ...);
 int _putchar(int ch);
