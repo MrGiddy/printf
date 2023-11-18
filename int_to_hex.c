@@ -13,6 +13,13 @@ int int_to_hex(unsigned int number, unsigned int hex_case)
 	char *upper_hex = "0123456789ABCDEF";
 	char *lower_hex = "0123456789abcdef";
 
+	count = 0;
+	if (number == 0)
+	{
+		count += _putchar('0');
+		return (count);
+	}
+
 	index = 0;
 	while (number > 0)
 	{
@@ -29,7 +36,6 @@ int int_to_hex(unsigned int number, unsigned int hex_case)
 	}
 	buffer[index] = '\0';
 
-	count = 0;
 	for (i = index - 1; i >= 0; i--)
 	{
 		count += _putchar(buffer[i]);

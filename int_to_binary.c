@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * integer_to_binary - Prints an integer in binary notation
- * @num: An unsigned integer
- * Return: The number of bytes printed 
+ * int_to_binary - Prints an integer in binary notation
+ * @number: An unsigned integer
+ * Return: The number of bytes printed
  */
 int int_to_binary(unsigned int number)
 {
