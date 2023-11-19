@@ -68,6 +68,9 @@ int _printf(const char *format, ...)
 				case 'p':
 					count_char += print_address(va_arg(args_list, void *));
 					break;
+				case 'R':
+					count_char += print_rot13dstr(va_arg(args_list, char *));
+					break;
 				default:
 					count_char += _putchar('%');
 					count_char += _putchar(*format);

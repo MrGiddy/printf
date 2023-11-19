@@ -45,3 +45,20 @@ Use a local buffer of 1024 bytes in order to call write as little as possible
 ## 5. Handle %S - A custom conversion specifier
 * S: prints the string.
 * Non printable characters (0 < ASCII value < 32 or >= 127) are printed this way: \x, followed by athe ASCII code value in hexadecimal (upper case - always 2 characters)
+
+### 6. Handle %p
+Handle the following conversion specifier: p.
+* You don’t have to handle the flag characters
+* You don’t have to handle field width
+* You don’t have to handle precision
+* You don’t have to handle the length modifiers
+
+### 7. Handle + and \#
+Handle the following flag characters for non-custom conversion specifiers:
+* +
+* space
+* #
+
+### 14. Handle %R - A custom conversion specifier
+Handle the following custom conversion specifier:
+* R: prints the rot13'ed string

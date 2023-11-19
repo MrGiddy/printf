@@ -7,6 +7,7 @@
 #include <stddef.h>
 #include <limits.h>
 #include <stdint.h>
+#include <stdlib.h>
 #define BUFFSIZE 1024
 
 int _printf(const char *format, ...);
@@ -19,5 +20,7 @@ int unsigned_int(unsigned int number, unsigned int base);
 int int_to_hex(unsigned int number, unsigned int hex_case);
 int handle_S(char *str);
 int print_address(void *ptr);
+char *_strcpy(char *dest, char *src);
+int print_rot13dstr(char *input_string);
 
 #endif /* MAIN_H */
