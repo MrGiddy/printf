@@ -15,6 +15,12 @@ int print_rot13dstr(char *input_string)
 
 	dest = (char *)malloc(sizeof(char) * _strlen(input_string) + 1);
 
+	count = 0;
+	if (dest == NULL)
+	{
+		return (count);
+	}
+
 	/* Copy input_string to dest */
 	_strcpy(dest, input_string);
 	/* Encode/Rotate input_string */
@@ -31,9 +37,10 @@ int print_rot13dstr(char *input_string)
 	}
 	dest[i] = '\0'; /* Just to make sure - Defensive programming */
 
-	count = 0;
 	/* Print the rotated string */
 	count += string_handler(dest);
+
+	free(dest);
 
 	return (count);
 }
