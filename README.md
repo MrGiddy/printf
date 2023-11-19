@@ -55,9 +55,13 @@ Handle the following conversion specifier: p.
 
 ### 7. Handle + and \#
 Handle the following flag characters for non-custom conversion specifiers:
-* +
+* \+
 * space
-* #
+* \#
+
+### Handle %r - A custom conversion specifier
+Handle the following custom conversion specifier
+* r: prints a reversed string
 
 ### 14. Handle %R - A custom conversion specifier
 Handle the following custom conversion specifier:

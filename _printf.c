@@ -74,6 +74,11 @@ int _printf(const char *format, ...)
 				case 'r':
 					count_char += print_reversed_string(va_arg(args_list, char *));
 					break;
+				case '+':
+					count_char += plus_handler(format, va_arg(args_list, int));
+					/* if (*(++format) == 'd' || *(++format) == 'i') */
+					format++; /* Skip char after + from printing if it's a d, i or u*/
+					break;
 				default:
 					count_char += _putchar('%');
 					count_char += _putchar(*format);

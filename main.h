@@ -23,5 +23,6 @@ int print_address(void *ptr);
 char *_strcpy(char *dest, char *src);
 int print_rot13dstr(char *input_string);
 int print_reversed_string(char *input_string);
+int plus_handler(const char *format, int number);
 
 #endif /* MAIN_H */
