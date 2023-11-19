@@ -22,5 +22,6 @@ int handle_S(char *str);
 int print_address(void *ptr);
 char *_strcpy(char *dest, char *src);
 int print_rot13dstr(char *input_string);
+int print_reversed_string(char *input_string);
 
 #endif /* MAIN_H */

@@ -71,6 +71,9 @@ int _printf(const char *format, ...)
 				case 'R':
 					count_char += print_rot13dstr(va_arg(args_list, char *));
 					break;
+				case 'r':
+					count_char += print_reversed_string(va_arg(args_list, char *));
+					break;
 				default:
 					count_char += _putchar('%');
 					count_char += _putchar(*format);
