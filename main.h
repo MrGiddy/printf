@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <stddef.h>
 #include <limits.h>
+#include <stdint.h>
 #define BUFFSIZE 1024
 
 int _printf(const char *format, ...);
@@ -17,5 +18,6 @@ int int_to_binary(unsigned int number);
 int unsigned_int(unsigned int number, unsigned int base);
 int int_to_hex(unsigned int number, unsigned int hex_case);
 int handle_S(char *str);
+int print_address(void *ptr);
 
 #endif /* MAIN_H */

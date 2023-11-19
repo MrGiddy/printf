@@ -65,6 +65,9 @@ int _printf(const char *format, ...)
 				case 'S':
 					count_char += handle_S(va_arg(args_list, char *));
 					break;
+				case 'p':
+					count_char += print_address(va_arg(args_list, void *));
+					break;
 				default:
 					count_char += _putchar('%');
 					count_char += _putchar(*format);
